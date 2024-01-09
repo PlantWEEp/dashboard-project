@@ -3,17 +3,14 @@ import Header from './components/Header';
 import Menubar from './components/Menubar';
 import PaymentsScreen from './pages/PaymentsScreen';
 
-function App() {
+function App() { 
+  
   return (
     <div className="flex h-screen">
-      {/* Sidebar / Menubar */}
       <Menubar />
 
-      <div className="flex flex-col flex-1 overflow-auto">
-        {/* Header */}
+      <div className="flex flex-col flex-1 overflow-auto pl-[14rem] lg:pl-0 bg-[#FAFAFA]">
         <Header />
-
-        {/* Main Content / Screens */}
         <PaymentsScreen />
       </div>
     </div>

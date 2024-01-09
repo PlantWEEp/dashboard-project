@@ -50,11 +50,11 @@ export default function Menubar() {
 
   return (
     <>
-        <div className='bg-skin-base w-[18%] flex justify-between flex-col gap-7 text-skin-base h-screen cursor-pointer p-5'>
+        <div className='bg-skin-base w-[224px] flex justify-between flex-col gap-7 text-skin-base h-screen cursor-pointer p-5 fixed z-10 lg:hidden '>
             <div className=''>
                 {users.map((user)=>{
                     return(
-                        <div className='flex gap-3'>
+                        <div className='flex gap-3' key={user.id}>
                             <img src={user.image} alt={user.name} className='w-[30%] object-cover'/>
                             <div className='relative'>
                                 <h4>{user.name}</h4>
@@ -66,27 +66,27 @@ export default function Menubar() {
                         </div>
                     )
                 })}
-            </div>
-            <div className='flex gap-2 flex-col'>
-                {menu.map((menuItem) => {
-                    return (
-                        <div className={`hover:bg-[#ffffff2e] transition ease-in-out delay-150 rounded-md px-4 py-2 flex items-center gap-3 ${
-                            menuItem.current ? 'bg-[#ffffff2e] rounded-md' : ''
-                            }`} key={menuItem.id}> 
-                            <p>{menuItem.icons}</p>
-                            <p>{menuItem.name}</p> 
-                        </div>
-                    );
-                })}
+            <div className='flex gap-2 flex-col mt-[24px]'>
+                {menu.map((menuItem) => (
+                    <ul>
+                    <li><a href='#' 
+                    className={`hover:bg-[#ffffff2e] hover:opacity-[100%] opacity-[80%] font-medium text-custom-ssm transition ease-in-out delay-150 rounded-md px-4 py-2 flex items-center gap-3 ${
+                        menuItem.current ? 'bg-[#ffffff36] rounded-md opacity-[100%]' : ''
+                    }`}
+                    key={menuItem.id}>{menuItem.icons} {menuItem.name}</a></li>
+                    </ul>
+                ))}
+                </div>
+
             </div>
             <div className='bg-[#ffffff2e] p-3 rounded-lg'>
             {wallets.map((user)=>{
                     return(
-                        <div className='flex gap-3 items-center'>
+                        <div key={user.id} className='flex gap-3 items-center'>
                             <span className='text-custom-lg p-1 rounded-lg bg-[#ffffff2e]'>{user.icon}</span>
                             <div className=''>
-                                <h6 className='text-lg'>{user.credits}</h6>
-                                <p className='text-lg'>{user.price}</p>
+                                <h6 className='text-custom-ssm'>{user.credits}</h6>
+                                <p className='text-custom-ssm'>{user.price}</p>
                             </div>
                         </div>
                     )

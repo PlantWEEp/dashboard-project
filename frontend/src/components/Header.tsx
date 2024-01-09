@@ -1,6 +1,6 @@
 import React from 'react';
 import { TfiAnnouncement } from 'react-icons/tfi';
-import { MdOutlineExpandMore } from 'react-icons/md';
+import { MdMenu, MdOutlineExpandMore } from 'react-icons/md';
 import { LiaQuestionCircle } from "react-icons/lia";
 import { CiSearch } from "react-icons/ci";
 
@@ -9,6 +9,7 @@ export default function Header() {
     <>
       <header className='flex justify-between w-[100%] items-center px-7 py-4 h-[67px] border-b-[1.5px] border-[#00000046]'>
         <ul className='flex gap-3 relative items-center font-regular'>
+        <li className='text-xl hidden lg:block'><MdMenu/></li>
           <li className='text-xl'>Payments</li>
           <li className='text-sm relative flex items-center gap-1'>
           <LiaQuestionCircle className='before:absolute before:text-custom-sm before:content-[<CiCircleInfo />]' />

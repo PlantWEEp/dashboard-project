@@ -5,10 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: { 
+    extend: { boxShadow: {
+      "custom-box": '0px 2px 6px 0px #1A181E0A'
+    },
       fontSize: {
-        'custom-lg': '40px', 
-        'custom-sm': '18px',
+        'custom-lg': '30px', 
+        'custom-sm': '18px', 
+        'custom-ssm':'14px', 
+        'custom-h4':'32px',
+        'custom-h5':'20px', 
       },
       textColor:{
         skin:{
@@ -28,7 +33,7 @@ export default {
 
       'xl': {'max': '1279px'},
 
-      'lg': {'max': '1023px'},
+      'lg': {'max': '999px'},
 
       'md': {'max': '767px'},
 
