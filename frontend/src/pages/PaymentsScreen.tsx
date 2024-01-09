@@ -4,10 +4,21 @@ import { CiSearch } from 'react-icons/ci';
 import { IoIosArrowDown } from "react-icons/io";
 import { LiaQuestionCircle } from 'react-icons/lia';
 import PaymentTable from './PaymentTable';
+import { BiSortAlt2 } from "react-icons/bi";
  
 
 export default function PaymentsScreen() {
   return (
+    <>
+    {/* moblie search screen */}
+    <div className='hidden lg:block relative m-[20px]'>
+          <input type='text' placeholder='Search features, tutorials, etc.' className='bg-skin-greybg w-[450px] lg:w-full lg:ml-[-5px] px-9 rounded-md text-start py-[7px]' id='search' />
+        <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+            <CiSearch className='text-gray-500' />
+        </div>
+    </div>
+
+    {/* payment dashboard */}
     <div className="p-4 w-full px-[32px] py-[32px]">
         <div className='flex justify-between items-center'>
             <h5 className='text-xl text-black'>Overview</h5>
@@ -72,14 +83,23 @@ export default function PaymentsScreen() {
             <p className='bg-[#146EB4] text-white py-[6px] rounded-full px-[16px]'>Refunds (6)</p>
         </div>
         <div className='mt-[32px] bg-[#fff] p-[12px] shadow-custom-box'>
-            <div className='relative'>
-            <input type='text' placeholder='Order ID or transaction ID' className=' text-custom-ssm border-[#D9D9D9] border w-[250px] h-[40px] px-9 rounded-md text-start py-[7px] bg-[#FFFFFF]' id='search' />
-                <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
-                    <CiSearch className='' />
+            <div className='flex justify-between items-center'>
+                <div className='relative'>
+                <input type='text' placeholder='Order ID or transaction ID' className=' text-custom-ssm border-[#D9D9D9] border w-[250px] h-[40px] px-9 rounded-md text-start py-[7px] bg-[#FFFFFF]' id='search' />
+                    <div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+                        <CiSearch className='' />
+                    </div>
+                </div>
+                <div className='text-[#4D4D4D]'>
+                    <div className='flex items-center gap-2 border border-[#D9D9D9] rounded-sm py-[6px] px-[12px] text-sm'>Sort <span className='text-sm'><BiSortAlt2 /></span></div>
                 </div>
             </div>
-            <PaymentTable/>
+            <div className='lg:overflow-x-scroll'>
+                <PaymentTable/>
+            </div> 
         </div>
     </div>
-  );
+  );    
+    </>
+)
 }

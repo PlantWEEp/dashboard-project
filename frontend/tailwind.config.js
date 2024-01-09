@@ -14,6 +14,7 @@ export default {
         'custom-ssm':'14px', 
         'custom-h4':'32px',
         'custom-h5':'20px', 
+        'custom-p':'15px', 
       },
       textColor:{
         skin:{
