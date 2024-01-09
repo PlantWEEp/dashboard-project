@@ -8,6 +8,7 @@ export default {
     extend: { 
       fontSize: {
         'custom-lg': '40px', 
+        'custom-sm': '18px',
       },
       textColor:{
         skin:{
@@ -17,7 +18,8 @@ export default {
       backgroundColor:{
         skin:{
           base:'var(--background-color-base)',
-          hover:'var(--hover-color)'
+          hover:'var(--hover-color)',
+          greybg:'var(--base-bg-color)'
         }
       }
     },

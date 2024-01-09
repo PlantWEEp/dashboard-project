@@ -1,18 +1,23 @@
- 
-import './App.css'
-import Header from './components/Header'
-import Menubar from './components/Menubar'
+import './App.css';
+import Header from './components/Header';
+import Menubar from './components/Menubar';
+import PaymentsScreen from './pages/PaymentsScreen';
 
-function App() { 
-
+function App() {
   return (
-   <>
-   <div className='flex flex-row'>
-   <Menubar/>
-    <Header/>
-   </div>
-   </>
-  )
+    <div className="flex h-screen">
+      {/* Sidebar / Menubar */}
+      <Menubar />
+
+      <div className="flex flex-col flex-1 overflow-auto">
+        {/* Header */}
+        <Header />
+
+        {/* Main Content / Screens */}
+        <PaymentsScreen />
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;

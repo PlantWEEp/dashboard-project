@@ -12,7 +12,7 @@ import { FaRegUser } from "react-icons/fa";
 import { BiBrush } from "react-icons/bi";
 import { AiFillThunderbolt } from "react-icons/ai"; 
 import { CiWallet } from "react-icons/ci"; 
-
+import { TfiAnnouncement } from "react-icons/tfi";
 export default function Menubar() {
 
     const users: { id: number, image: any, name: string, link: string }[] = [
@@ -38,7 +38,7 @@ export default function Menubar() {
         {id:2,name:"Orders",icons:<CiViewList />,current:false,href:"#"},
         {id:3,name:"Products",icons:<RxDashboard />,current:false,href:"#"},
         {id:4,name:"Delivery",icons:<FaTruck />,current:false,href:"#"},
-        {id:5,name:"Marketing",icons:<MdOutlineRecordVoiceOver />,current:false,href:"#"},
+        {id:5,name:"Marketing",icons:<TfiAnnouncement />,current:false,href:"#"},
         {id:6,name:"Analytics",icons:<VscGraph />,current:false,href:"#"},
         {id:7,name:"Payments",icons:<IoCashOutline />,current:true,href:"#"},
         {id:8,name:"Tools",icons:<FaTools />,current:false,href:"#"},
@@ -50,7 +50,7 @@ export default function Menubar() {
 
   return (
     <>
-        <div className='bg-skin-base w-[18%] flex justify-between flex-col gap-7 text-skin-base h-[100%] cursor-pointer p-5'>
+        <div className='bg-skin-base w-[18%] flex justify-between flex-col gap-7 text-skin-base h-screen cursor-pointer p-5'>
             <div className=''>
                 {users.map((user)=>{
                     return(
